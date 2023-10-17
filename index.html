@@ -14,10 +14,12 @@
       color: white; /* 设置字体颜色为白色 */
     }
 
+
     .container {
-      max-width: 600px; /* 设置内容容器的最大宽度 */
-      margin: 0 auto; /* 水平居中内容容器 */
-      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .menu {
@@ -53,16 +55,16 @@
       text-align: center; /* 设置段落内容水平居中 */
     }
 
-    .image {
-      max-width: 100%; /* 图片的最大宽度为父容器宽度 */
-      height: auto; /* 自动计算图片高度，保持比例 */
-      display: block; /* 确保图片居中显示 */
-      margin: 20px auto; /* 上下留有一些间距，并水平居中 */
+    img {
+      width: 60%;
     }
 
-    .green-text {
-      color: green; /* 设置绿色文本的颜色为绿色 */
+    .caption {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
     }
+
 
 
   </style>
@@ -73,13 +75,51 @@
   <h1>WELCOME TO</h1>
   <h1>THE HE FAMILY FOOT SMILE SPA</h1>
 
-  <h3>OPEN MON-SAT 10:00-09:00 SUN 10:30-08:00</h3>
+  <h2>OPEN </h2>
+  <h3>MON-SAT 10:00-21:00</h3>
+  <h3>SUN 10:30-20:00</h3>
+  <br>
+
   <!-- <h3 class="green-text">OPEN MON-SAT 10:00-09:00 SUN 10:30-08:00</h3> -->
   <h3>+1 (847) 583-1616</h3>
   <h2>9235 Waukegan Rd, Morton Grove, IL 60053</h2>
 
 
-  <!-- <br> -->
+
+<!-- 1 -->
+  <img class="image" src="image/foot.png">
+  <!-- <h3>Foot Reflexology & Body Massage</h3> -->
+  <div class="caption">Foot Reflexology & Body Massage</div>
+
+  <p>
+Relax from head to toe with our foot reflexology & body massage. Soothe your aching feet in a relaxing foot soak while your head, shoulders, back, hands, and feet are massaged to make you feel years younger and relieve tension and stress This massage is designed to pamper and purify with special focus on the body areas that receive the hardest stress in daily life. It's done partially clothed Asian style in a community room.
+  </p>
+
+<!-- 2 -->
+  <img class="image" src="image/deep.jpeg">
+  <div class="caption">DEEP TISSUE</div>
+  <!-- <h3>DEEP TISSUE</h3> -->
+  <p>
+none
+  </p>
+
+<!-- 3 -->
+  <img class="image" src="image/combo.png">
+  <!-- <h3>COMBO MASSAGE</h3> -->
+  <div class="caption">COMBO MASSAGE</div>
+
+  <p>
+none
+  </p>
+
+<!-- 4 -->
+  <img class="image" src="image/four.jpeg">
+  <!-- <h3>FOUR HANDS</h3> -->
+  <div class="caption">FOUR HANDS</div>
+  <p>
+Are you extra stressed? The Asian style body and foot massage session by 4hands provides the perfect escape from a stressful day. Get double the pleasure by having 2 massage therapists work your entire body during this one hour session. This is our most popular massage. 
+  </p>
+
 
   <div class="menu">
     <h2>Foot smile Spa</h2>
@@ -105,3 +145,4 @@
 
 
 
+       
