@@ -63,7 +63,6 @@
     }
 
     p a {
-      line-height: 1.5;
       color: red; /* 设置段落的颜色为灰色 */
       text-align: center; /* 设置段落内容水平居中 */
     }
@@ -116,7 +115,7 @@
 .close {
   color: black;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -173,7 +172,8 @@
     </a>
   </h2>
 
-
+  <p><a> Buy 6 Gift Card Get 1 FREE (Cash Only)</p></a>
+  <p><a> From 11/15/23 - 01/15/24</p></a>
 
 <!-- 1 -->
   <img class="image" src="image/foot.png">
@@ -241,8 +241,8 @@ Are you extra stressed? The Asian style body and foot massage session by 4 hands
   <div class="modal-content">
     <span class="close">&times;</span>
     <h5>Gift Card Promotion</h5>
-    <p><a> Buy 6 Gift Card Get 1 FREE (Cash Only)</p></a>
-    <p><a> From 11/15/23 - 01/15/24</p></a>
+    <p><a> Buy 6 Gift Card Get 1 FREE (Cash Only) </p></a>
+    <p><a> From 11/15/23 - 01/15/24 </p></a>
     <h2><button class="shop-now-btn"><a href="http://maps.google.com/?q=9235 Waukegan Rd, Morton Grove, IL 60053">SHOP NOW
     </a></button>
     </h2>
@@ -264,11 +264,19 @@ Are you extra stressed? The Asian style body and foot massage session by 4 hands
   }
   
   // 当用户点击弹窗外的区域时，也关闭弹窗
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
+  // 处理点击和触摸事件
+  function handleOutsideClick(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+   }
   }
+
+  // 当用户点击弹窗外的区域时，关闭弹窗
+  window.onclick = handleOutsideClick;
+
+  // 对于移动设备，添加触摸事件监听
+  window.ontouchstart = handleOutsideClick;
+
   
   // 可以通过以下代码在页面加载时自动显示弹窗
   window.onload = function() {
