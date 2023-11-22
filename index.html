@@ -50,9 +50,21 @@
       color: #ffffff; /* 设置标题的颜色为白色 */
     }
 
+    h5 {
+      font-size: 24px; 
+      text-align: center;
+      color: red; /* 设置标题的颜色为红色 */
+    }
+
     p {
       line-height: 1.5;
       color: #cccccc; /* 设置段落的颜色为灰色 */
+      text-align: center; /* 设置段落内容水平居中 */
+    }
+
+    p a {
+      line-height: 1.5;
+      color: red; /* 设置段落的颜色为灰色 */
       text-align: center; /* 设置段落内容水平居中 */
     }
 
@@ -76,6 +88,59 @@
     h2 a {
       white-space: pre-line; /* Allow line breaks */
     }
+    
+    /* 弹窗的基本样式 */
+.modal {
+  display: none; /* 默认隐藏 */
+  position: fixed; /* 固定位置 */
+  z-index: 1; /* 置于顶层 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 全屏宽 */
+  height: 100%; /* 全屏高 */
+  overflow: auto; /* 启用滚动条 */
+  background-color: rgb(0,0,0); /* 背景色 */
+  background-color: rgba(0,0,0,0.4); /* 背景色，带透明度 */
+}
+
+/* 弹窗内容的样式 */
+.modal-content {
+  background-color: #cac5c5;
+  margin: 15% auto; /* 居中显示 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 宽度 */
+}
+
+/* 关闭按钮的样式 */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* "Shop Now"按钮的样式 */
+.shop-now-btn {
+  background-color: #4CAF50; /* 绿色 */
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.shop-now-btn:hover {
+  background-color: #45a049;
+}
 
 
 
@@ -170,9 +235,46 @@ Are you extra stressed? The Asian style body and foot massage session by 4 hands
   </div>
 
   </div>
+  <!-- 弹窗开始 -->
+<div id="myModal" class="modal">
+  <!-- 弹窗内容 -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h5>Gift Card Promotion</h5>
+    <p><a> Buy 6 Gift Card Get 1 FREE (Cash Only)</p></a>
+    <p><a> From 11/15/23 - 01/15/24</p></a>
+    <h2><button class="shop-now-btn"><a href="http://maps.google.com/?q=9235 Waukegan Rd, Morton Grove, IL 60053">SHOP NOW
+    </a></button>
+    </h2>
+  </div>
+</div>
+<!-- 弹窗结束 -->
 </body>
+
+<script>
+  // 获取弹窗
+  var modal = document.getElementById("myModal");
+  
+  // 获取关闭按钮元素
+  var span = document.getElementsByClassName("close")[0];
+  
+  // 当用户点击关闭按钮时，关闭弹窗
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // 当用户点击弹窗外的区域时，也关闭弹窗
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  // 可以通过以下代码在页面加载时自动显示弹窗
+  window.onload = function() {
+    modal.style.display = "block";
+  }
+  </script>
+  
+
 </html>
-
-
-
-       
